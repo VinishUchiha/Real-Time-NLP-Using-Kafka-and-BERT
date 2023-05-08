@@ -13,10 +13,9 @@ if __name__ == '__main__':
     parser.add_argument('--sleep', type=float, default=0.01, help="sleep time for each iteration")
     args = parser.parse_args()
     
-    df = pd.read_csv(args.data_path,header=None, encoding='latin-1') #'tweets_sentiments/tweets_data.csv'
+    df = pd.read_csv(args.data_path,header=None, encoding='latin-1')
     df.columns = ['target','id','date', 'flag', 'user', 'text']
     records = df.to_dict(orient='records')
-    #'twitter_data_batched_1ms'
     producer = Producer({'bootstrap.servers':args.kafka_bootstrap_servers})
     count = 1
     for record in records:
