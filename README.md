@@ -13,3 +13,9 @@ After Creating the topic, We need to start the producer and feed the tweet data 
 ```bash
 python tweet_producer.py --data_path ./data/tweets_data.csv --topic_name twitter_data --kafka_bootstrap_servers localhost --sleep 0.01
 ```
+
+Approach 1: Single Inference
+
+```bash
+python tweet_consumer_and_predictor.py --topic_name twitter_data --kafka_bootstrap_servers localhost --offset latest --mongodb_database analytics --mongodb_collection_name sentiments
+```
