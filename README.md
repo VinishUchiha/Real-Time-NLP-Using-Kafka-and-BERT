@@ -1,5 +1,6 @@
 # Real-Time NLP using Kafka and BERT
 
+This Repo contains the code for the article [When Kafka Meets BERT: A Realtime NLP using Kafka and BERT — Part 1](https://medium.com/@vinishuchiha_29660/when-kafka-meets-bert-a-realtime-nlp-using-kafka-and-bert-part-1-ee20a8226f02)
 
 At First, Create the New Kafka topic
 
