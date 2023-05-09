@@ -19,3 +19,8 @@ Approach 1: Single Inference
 ```bash
 python tweet_consumer_and_predictor.py --topic_name twitter_data --kafka_bootstrap_servers localhost --offset latest --mongodb_database analytics --mongodb_collection_name sentiments
 ```
+Approach 2: Batched Inference
+
+```bash
+python tweet_consumer_and_predictor_batched.py --topic_name twitter_data --kafka_bootstrap_servers localhost --offset latest --batch_size 64 --mongodb_database analytics --mongodb_collection_name sentiments
+```
